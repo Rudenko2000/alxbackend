@@ -1,0 +1,26 @@
+{% extends 'library/base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{{author}}</title>
+</head>
+<body>
+
+<h1>{{author}} </h1>
+{% if listabooks %}
+{%for book in listabooks %}
+<li> <a href="{% url 'book' book.id %}"> Książka - {{book.title}} </a></li>
+
+
+{% endfor %}
+</ul>
+{% else %}
+    Na tazie nie mamy książek
+{% endif %}
+
+</body>
+
+{% endblock %}
