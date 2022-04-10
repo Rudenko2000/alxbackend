@@ -1,9 +1,9 @@
 {% extends 'library/base.html' %}
 
-{% block title %}{{ title }}{% endblock %}
+
 
 {% block content %}
-    <h1>{{ title1 }}</h1>
+<!--    <h1>{{ title1 }}</h1>-->
 
     <p>{{ title2 }}</p>
     <p>{{ title3 }}</p>
@@ -16,11 +16,15 @@
     <li> <a href="{% url 'book' book.id %}"> Książka - {{book.title}} </a></li>
 
 
+
     {% endfor %}
     </ul>
     {% else %}
         Na tazie nie mamy książek
     {% endif %}
+<p><a href="{% url 'add book'%}">add ksążkę </a></p>
+
+
 
 
 {% endblock %}

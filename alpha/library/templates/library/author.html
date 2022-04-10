@@ -1,7 +1,5 @@
 {% extends 'library/base.html' %}
 
-{% block title %}{{ title }}{% endblock %}
-
 {% block content %}
 <head>
     <meta charset="UTF-8">
@@ -15,12 +13,13 @@
 <li> <a href="{% url 'book' book.id %}"> Książka - {{book.title}} </a></li>
 
 
+
 {% endfor %}
 </ul>
 {% else %}
     Na tazie nie mamy książek
 {% endif %}
-
+<p><a href="{% url 'add book'%}">add ksążkę </a></p>
 </body>
 
 {% endblock %}
