@@ -8,7 +8,12 @@
 <body>
 
 <header><a href="{% url 'home' %}" >Biblioteka </a></header>
+{% if messages %}
+    {% for message in messages %}
+    <p>{{message}}</p>
+    {%endfor%}
 
+{% endif %}
 {% block content %}
 
 
@@ -17,7 +22,7 @@
 
 
 
-<hr>
+<hr >
 <p> A. Rudenko </p>
 </body>
 </html>
